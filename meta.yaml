@@ -1,0 +1,18 @@
+apiVersion: v2                                                   
+publisher: readyhat
+name: vscode-vim
+version: 1.14.1                          
+type: VS Code extension  
+displayName: Vim
+title: Vim
+description: Vim
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg     
+repository: https://github.com/VSCodeVim/Vim.git
+category:                                                       
+spec:
+  containers:
+    - image: "registry.redhat.io/codeready-workspaces/plugin-openshift-rhel8"
+      name: crw-ocp-rel8
+      memoryLimit: 1280Mi
+  extensions:                                                   
+    - https://github.com/readyhat/che-plugin-vim/raw/v1.14.1/vscode-vim.vsix
